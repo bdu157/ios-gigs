@@ -17,6 +17,7 @@
 		0B4B949C22A0CA950065F140 /* Gig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B949B22A0CA950065F140 /* Gig.swift */; };
 		0B4B949E22A0CB180065F140 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B949D22A0CB180065F140 /* Bearer.swift */; };
 		0B4B94A022A0CB6B0065F140 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B949F22A0CB6B0065F140 /* User.swift */; };
+		0B4B94A222A0CBC30065F140 /* GigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B94A122A0CBC30065F140 /* GigController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0B4B949B22A0CA950065F140 /* Gig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gig.swift; sourceTree = "<group>"; };
 		0B4B949D22A0CB180065F140 /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		0B4B949F22A0CB6B0065F140 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0B4B94A122A0CBC30065F140 /* GigController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				0B4B949B22A0CA950065F140 /* Gig.swift */,
 				0B4B949D22A0CB180065F140 /* Bearer.swift */,
 				0B4B949F22A0CB6B0065F140 /* User.swift */,
+				0B4B94A122A0CBC30065F140 /* GigController.swift */,
 			);
 			path = iOSGigs;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4B948822A0B5880065F140 /* GigsDetailViewController.swift in Sources */,
+				0B4B94A222A0CBC30065F140 /* GigController.swift in Sources */,
 				0B4B948622A0B5880065F140 /* AppDelegate.swift in Sources */,
 				0B4B949E22A0CB180065F140 /* Bearer.swift in Sources */,
 				0B4B949822A0C08E0065F140 /* GigsTableViewController.swift in Sources */,
