@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		0B4B948622A0B5880065F140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B948522A0B5880065F140 /* AppDelegate.swift */; };
-		0B4B948822A0B5880065F140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B948722A0B5880065F140 /* ViewController.swift */; };
+		0B4B948822A0B5880065F140 /* GigsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B948722A0B5880065F140 /* GigsDetailViewController.swift */; };
 		0B4B948B22A0B5890065F140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4B948922A0B5890065F140 /* Main.storyboard */; };
 		0B4B948D22A0B58A0065F140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4B948C22A0B58A0065F140 /* Assets.xcassets */; };
 		0B4B949022A0B58A0065F140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4B948E22A0B58A0065F140 /* LaunchScreen.storyboard */; };
+		0B4B949822A0C08E0065F140 /* GigsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B949722A0C08E0065F140 /* GigsTableViewController.swift */; };
+		0B4B949A22A0C0F10065F140 /* LoginViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B949922A0C0F10065F140 /* LoginViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B4B948222A0B5880065F140 /* iOSGigs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSGigs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4B948522A0B5880065F140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B4B948722A0B5880065F140 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B4B948722A0B5880065F140 /* GigsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigsDetailViewController.swift; sourceTree = "<group>"; };
 		0B4B948A22A0B5890065F140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B4B948C22A0B58A0065F140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B4B948F22A0B58A0065F140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B4B949122A0B58A0065F140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B4B949722A0C08E0065F140 /* GigsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigsTableViewController.swift; sourceTree = "<group>"; };
+		0B4B949922A0C0F10065F140 /* LoginViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				0B4B948522A0B5880065F140 /* AppDelegate.swift */,
-				0B4B948722A0B5880065F140 /* ViewController.swift */,
 				0B4B948922A0B5890065F140 /* Main.storyboard */,
 				0B4B948C22A0B58A0065F140 /* Assets.xcassets */,
 				0B4B948E22A0B58A0065F140 /* LaunchScreen.storyboard */,
 				0B4B949122A0B58A0065F140 /* Info.plist */,
+				0B4B949722A0C08E0065F140 /* GigsTableViewController.swift */,
+				0B4B948722A0B5880065F140 /* GigsDetailViewController.swift */,
+				0B4B949922A0C0F10065F140 /* LoginViewViewController.swift */,
 			);
 			path = iOSGigs;
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B4B948822A0B5880065F140 /* ViewController.swift in Sources */,
+				0B4B948822A0B5880065F140 /* GigsDetailViewController.swift in Sources */,
 				0B4B948622A0B5880065F140 /* AppDelegate.swift in Sources */,
+				0B4B949822A0C08E0065F140 /* GigsTableViewController.swift in Sources */,
+				0B4B949A22A0C0F10065F140 /* LoginViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
