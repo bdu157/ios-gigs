@@ -21,7 +21,7 @@ class GigsTableViewController: UITableViewController {
             
             self.gigController.fetchGigs { (error) in
                 if let error = error {
-                    print(error)
+                    
                     return
                 } else {
                     DispatchQueue.main.async {

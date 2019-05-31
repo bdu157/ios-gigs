@@ -78,9 +78,10 @@ class LoginViewViewController: UIViewController {
                     }
                 }
             } else {
-                gigController.signUp(with: user) { (error) in
+                self.gigController.logIn(with: user) { (error) in
                     if let error = error {
-                        NSLog("Error occurred during sign up: \(error)")
+                        print(error)
+                        return
                     } else {
                         DispatchQueue.main.async {
                             self.dismiss(animated: true, completion: nil)

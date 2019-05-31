@@ -31,7 +31,7 @@ class GigsDetailViewController: UIViewController {
               guard let title = titleTextField.text,
                 let dates = datePicker?.date,
                 let description = descriptionTextView.text else {return}
-            gigController.CreateGig(title: title, description: description, dueData: dates) { (error) in
+            gigController.CreateGig(title: title, description: description, dueDate: dates) { (error) in
                 if let error = error {
                     NSLog("Error : \(error)")
                     return

@@ -69,9 +69,9 @@ class GigController {
     
     //log in - POST
     func logIn(with user: User, completion: @escaping (Error?)-> ()) {
-        let signUpURL = baseUrl.appendingPathComponent("users/login")
+        let logInURL = baseUrl.appendingPathComponent("users/login")
         
-        var request = URLRequest(url: signUpURL)
+        var request = URLRequest(url: logInURL)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -130,7 +130,7 @@ class GigController {
         
         var request = URLRequest(url: gigsURL)
         request.httpMethod = HTTPMethod.get.rawValue
-        request.setValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse,
@@ -151,8 +151,8 @@ class GigController {
             let decoder = JSONDecoder()
             
             do {
-                let gigs = try decoder.decode([Gig].self, from: data)
-                self.gigs = [gigs[0]]
+                let gigss = try decoder.decode([Gig].self, from: data)
+                self.gigs = [gigss[0]]
             } catch {
                 NSLog("Error decoding animal objects: \(error)")
                 completion(NSError())
@@ -163,12 +163,11 @@ class GigController {
     }
     //create gig - POST
 
-    func CreateGig(title: String, description: String, dueData:Date, completion: @escaping (Error?)->Void) {
+    func CreateGig(title: String, description: String, dueDate:Date, completion: @escaping (Error?)->Void) {
       
-        let gigss = Gig.init(title: title, description: description, dueDate: dueData)
+        let gigss = Gig(title: title, description: description, dueDate: dueDate)
         
         let createURL = baseUrl.appendingPathComponent("gigs")
-        
         
         guard let bearer = bearer else {
                 completion(NSError())
@@ -178,7 +177,7 @@ class GigController {
         
         var request = URLRequest(url: createURL)
         request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
         
         let jsonEncoder = JSONEncoder()
         
