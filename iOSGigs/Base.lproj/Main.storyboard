@@ -222,6 +222,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="Hju-87-6Hn" id="gaX-mx-sdx"/>
+                        <outlet property="descriptionTextView" destination="bxd-23-Kps" id="Ahh-EX-aLS"/>
                         <outlet property="dueDateTextField" destination="uUE-Rv-OhY" id="u6y-cl-A4Y"/>
                     </connections>
                 </viewController>
