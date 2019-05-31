@@ -120,9 +120,9 @@ class GigController {
     }
     
     //fetching gigs - GET
-    func fetchGigs(completion:@escaping (Result<[Gig], NetworkError>)-> Void) {
+    func fetchGigs(completion:@escaping (Error?)-> Void) {
         guard let bearer = self.bearer else {
-            completion(.failure(.noAuth))
+            completion(NSError())
             return
         }
         
@@ -135,16 +135,16 @@ class GigController {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse,
                 response.statusCode == 401 {
-                completion(.failure(.badAuth))
+                completion(NSError())
                 return
         }
             if let _ = error {
-                completion(.failure(.otherError))
+                completion(NSError())
                 return
             }
             
             guard let data = data else {
-                completion(.failure(.badData))
+                completion(NSError())
                 return
             }
             
@@ -155,9 +155,10 @@ class GigController {
                 self.gigs = [gigs[0]]
             } catch {
                 NSLog("Error decoding animal objects: \(error)")
-                completion(.failure(.noDecode))
+                completion(NSError())
                 return
             }
+            completion(nil)
             }.resume()
     }
     //create gig - POST
@@ -203,7 +204,6 @@ class GigController {
             }
             
             self.gigs.append(gigss)
-            
             
             completion(nil)
             }.resume()

@@ -223,7 +223,7 @@
                     <connections>
                         <outlet property="datePicker" destination="Hju-87-6Hn" id="gaX-mx-sdx"/>
                         <outlet property="descriptionTextView" destination="bxd-23-Kps" id="Ahh-EX-aLS"/>
-                        <outlet property="dueDateTextField" destination="uUE-Rv-OhY" id="u6y-cl-A4Y"/>
+                        <outlet property="titleTextField" destination="uUE-Rv-OhY" id="hlk-lD-EjL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ame-oN-VS7" userLabel="First Responder" sceneMemberID="firstResponder"/>

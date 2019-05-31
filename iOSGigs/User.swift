@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User: Codable {
+struct User: Codable {
     let username: String
     let password: String
 }
