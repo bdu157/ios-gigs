@@ -77,6 +77,8 @@ class GigController {
         
         let jsonEncoder = JSONEncoder()
         
+            jsonEncoder.dateEncodingStrategy = .formatted(DateFormatter())
+        
         do {
             let jsonData = try jsonEncoder.encode(user)
             request.httpBody = jsonData
@@ -150,9 +152,12 @@ class GigController {
             
             let decoder = JSONDecoder()
             
+                decoder.dateDecodingStrategy = .iso8601
+            
             do {
-                let gigss = try decoder.decode([Gig].self, from: data)
-                self.gigs = [gigss[0]]
+                self.gigs = try decoder.decode([Gig].self, from: data)
+           
+                completion(nil)
             } catch {
                 NSLog("Error decoding animal objects: \(error)")
                 completion(NSError())
@@ -162,24 +167,29 @@ class GigController {
             }.resume()
     }
     //create gig - POST
-
-    func CreateGig(title: String, description: String, dueDate:Date, completion: @escaping (Error?)->Void) {
-      
+    
+    func CreateGig(title: String, description: String, dueDate: Date, completion: @escaping (Error?)->Void) {
+        
         let gigss = Gig(title: title, description: description, dueDate: dueDate)
         
         let createURL = baseUrl.appendingPathComponent("gigs")
         
         guard let bearer = bearer else {
-                completion(NSError())
-                return
+            completion(NSError())
+            return
         }
         
         
         var request = URLRequest(url: createURL)
         request.httpMethod = HTTPMethod.post.rawValue
         request.addValue("Bearer \(bearer.token)", forHTTPHeaderField: "Authorization")
+        //this
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let jsonEncoder = JSONEncoder()
+        
+        //this
+            jsonEncoder.dateEncodingStrategy = .iso8601
         
         do {
             let jsonData = try jsonEncoder.encode(gigss)

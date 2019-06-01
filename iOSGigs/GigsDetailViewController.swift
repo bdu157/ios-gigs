@@ -15,8 +15,10 @@ class GigsDetailViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     
     var gigController: GigController!
+    
     var gig: Gig? {
         didSet {
+            loadViewIfNeeded()
             updateViews()
         }
     }
@@ -29,9 +31,9 @@ class GigsDetailViewController: UIViewController {
     @IBAction func saveButtonTapped(_ sender: Any) {
         if gig == nil {
               guard let title = titleTextField.text,
-                let dates = datePicker?.date,
-                let description = descriptionTextView.text else {return}
-            gigController.CreateGig(title: title, description: description, dueDate: dates) { (error) in
+                let description = descriptionTextView.text,
+                let date = datePicker?.date else {return}
+           self.gigController.CreateGig(title: title, description: description, dueDate: date) { (error) in
                 if let error = error {
                     NSLog("Error : \(error)")
                     return
@@ -48,10 +50,10 @@ class GigsDetailViewController: UIViewController {
  
     
     func updateViews() {
-        if let gig = gig {
-            titleTextField.text = gig.title
-            datePicker.date = gig.dueDate
-            descriptionTextView.text = gig.description
+        if let gigsss = gig {
+            titleTextField.text = gigsss.title
+            datePicker.date = gigsss.dueDate
+            descriptionTextView.text = gigsss.description
             navigationItem.title = "View Gig"
         } else {
             navigationItem.title = "New Gig"

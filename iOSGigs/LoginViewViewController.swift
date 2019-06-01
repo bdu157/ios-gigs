@@ -27,6 +27,10 @@ class LoginViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        signUpandLogInSegmentedControl.backgroundColor = .white
+        signUpandLogInSegmentedControl.layer.cornerRadius = 8.0
+        signUpandLogInSegmentedControl.tintColor = UIColor(hue: 190/360, saturation: 70/100, brightness: 80/100, alpha: 1.0)
+        
         signUpLogInButton.backgroundColor = UIColor(hue: 190/360, saturation: 70/100, brightness: 80/100, alpha: 1.0)
         signUpLogInButton.tintColor = .white
         signUpLogInButton.layer.cornerRadius = 8.0

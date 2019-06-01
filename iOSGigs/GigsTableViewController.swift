@@ -21,7 +21,7 @@ class GigsTableViewController: UITableViewController {
             
             self.gigController.fetchGigs { (error) in
                 if let error = error {
-                    
+                    print(error)
                     return
                 } else {
                     DispatchQueue.main.async {
@@ -34,6 +34,7 @@ class GigsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -63,11 +64,10 @@ class GigsTableViewController: UITableViewController {
         if segue.identifier == "ShowGig" {
             guard let destVC = segue.destination as? GigsDetailViewController,
                 let selectedRow = tableView.indexPathForSelectedRow else {return}
-                destVC.gigController = self.gigController
                 destVC.gig = self.gigController.gigs[selectedRow.row]
         } else if segue.identifier == "AddGig" {
-            guard let desVC = segue.destination as? GigsDetailViewController else {return}
-                desVC.gigController = self.gigController
+            guard let destVC = segue.destination as? GigsDetailViewController else {return}
+                destVC.gigController = self.gigController
         } else if segue.identifier == "ToLoginVC" {
             guard let destVC = segue.destination as? LoginViewViewController else {return}
                 destVC.gigController = self.gigController

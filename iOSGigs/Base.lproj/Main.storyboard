@@ -19,19 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DJC-Cm-QiL">
-                                <rect key="frame" x="30" y="142" width="315" height="30"/>
+                                <rect key="frame" x="30" y="154" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iiw-Gf-z2Q">
-                                <rect key="frame" x="30" y="192" width="315" height="30"/>
+                                <rect key="frame" x="30" y="204" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7n4-gZ-xQh">
-                                <rect key="frame" x="120" y="84" width="135" height="29"/>
+                                <rect key="frame" x="100" y="84" width="175" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="b1O-4u-1eM"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Sign Up"/>
                                     <segment title="Log In"/>
@@ -41,7 +44,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-c7-bg0">
-                                <rect key="frame" x="140" y="252" width="95" height="39"/>
+                                <rect key="frame" x="140" y="264" width="95" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -59,9 +62,9 @@
                             <constraint firstItem="DJC-Cm-QiL" firstAttribute="leading" secondItem="fjc-S4-VhM" secondAttribute="leading" constant="30" id="bqd-cm-opy"/>
                             <constraint firstItem="iiw-Gf-z2Q" firstAttribute="top" secondItem="DJC-Cm-QiL" secondAttribute="bottom" constant="20" id="c1H-JX-7Fy"/>
                             <constraint firstItem="fjc-S4-VhM" firstAttribute="trailing" secondItem="iiw-Gf-z2Q" secondAttribute="trailing" constant="30" id="csA-Hz-lWY"/>
-                            <constraint firstItem="fjc-S4-VhM" firstAttribute="trailing" secondItem="7n4-gZ-xQh" secondAttribute="trailing" constant="120" id="pwm-E6-ueY"/>
-                            <constraint firstItem="7n4-gZ-xQh" firstAttribute="top" secondItem="fjc-S4-VhM" secondAttribute="top" constant="40" id="uwm-FX-3AP"/>
-                            <constraint firstItem="7n4-gZ-xQh" firstAttribute="leading" secondItem="fjc-S4-VhM" secondAttribute="leading" constant="120" id="wdH-9O-TR1"/>
+                            <constraint firstItem="7n4-gZ-xQh" firstAttribute="leading" secondItem="fjc-S4-VhM" secondAttribute="leading" constant="100" id="hyp-Iy-Xl2"/>
+                            <constraint firstItem="7n4-gZ-xQh" firstAttribute="top" secondItem="fjc-S4-VhM" secondAttribute="top" constant="40" id="rm9-SG-Nrr"/>
+                            <constraint firstItem="fjc-S4-VhM" firstAttribute="trailing" secondItem="7n4-gZ-xQh" secondAttribute="trailing" constant="100" id="rzV-D9-VmS"/>
                             <constraint firstItem="Omq-c7-bg0" firstAttribute="leading" secondItem="fjc-S4-VhM" secondAttribute="leading" constant="140" id="ziY-cw-89h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fjc-S4-VhM"/>
